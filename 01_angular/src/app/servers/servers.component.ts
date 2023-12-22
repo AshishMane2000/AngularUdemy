@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './servers.component.css'
 })
 export class ServersComponent {
-
+flag=true;
+color="black";
+constructor(  ){
+  setTimeout(() => {
+    this.flag=false;
+    this.color="green"
+  }, 2000);
+}
 }

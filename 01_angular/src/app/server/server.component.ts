@@ -11,10 +11,15 @@ import { Component } from '@angular/core';
   // styleUrl: './server.component.css'
   styles:[`
     h4{
-      color:green ;
+      color:red ;
     }
   `]
 })
 export class ServerComponent {
-
+  id :number=1;
+  port:number=5500;
+  status="ok"
+  getStartupTime(){
+    return 11;
+  }
 }
