@@ -1,0 +1,23 @@
+<!-- <h5>this is assignment 02 REPRESENT</h5>
+<input type="text" [(ngModel)]="username" (input)="usernameaction()" />
+<p>user name is : {{ username }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="disabledflag"
+  (click)="resetnamefield()"
+>
+  reset
+</button>
+<hr /> -->
+
+<h5>this is assignment 02 REPRESENT by tutor</h5>
+<input type="text" [(ngModel)]="username" (input)="usernameaction()" />
+<p>user name is : {{ username }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="username === ''"
+  (click)="username = ''"
+>
+  reset
+</button>
+<hr />

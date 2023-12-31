@@ -1,14 +1,38 @@
-<!-- <app-server></app-server> -->   
-            <!-- STRING AS A SELECTOR -->
+<!-- <app-server></app-server> -->
+<!-- STRING AS A SELECTOR -->
 
-<!-- <div app-server></div> --> 
-            <!-- attribute selector   -->
+<!-- <div app-server></div> -->
+<!-- attribute selector   -->
 
-<!-- <div class="app-serverxx"></div> --> 
-            <!-- CSS . SELECTOR FOR THE COMPONENT -->
+<!-- <div class="app-serverxx"></div> -->
+<!-- CSS . SELECTOR FOR THE COMPONENT -->
 
-          <div class="container-fluid">
-            <div class="app-serverxx"></div>
-            <div class="app-serverxx"></div>
-            <button  class="btn btn-danger" [(disabled)]="flag"  [style.color]="color"  > click me </button>
-          </div>
+<div class="container-fluid">
+  <div class="app-serverxx"></div>
+  <div class="app-serverxx"></div>
+
+  <input (input)="inputchanged($event)" />
+  <!-- one way data  binding using event binding -->
+
+  <input [(ngModel)]="name" />
+  <!-- two way data binding using ngmodel  -->
+  .
+
+  <br />
+  name is : {{ name }}
+  <br />
+
+  <button
+    class="btn btn-danger"
+    [disabled]="flag"
+    [style.color]="color"
+    (click)="changeColor()"
+  >
+    click me
+  </button>
+  <p>color is :{{ color }}</p>
+  <p *ngIf="flag; else anothercode">company is : {{ company }}</p>
+  <ng-template #anothercode>
+    this code is executed when if condition fails
+  </ng-template>
+</div>
