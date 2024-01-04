@@ -1,0 +1,21 @@
+<div [ngClass]="['container-fluid','']">
+    <h4 class="text-center">Assignment- 3</h4>
+    <hr>
+    <button [ngClass]="['btn btn-outline-danger']" (click)="toggleshowpara()">Display Details</button>
+    <p *ngIf="showpara===true" class="  text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+        necessitatibus quia quo maiores molestias dolor dolore voluptatibus recusandae nostrum. Delectus ipsam
+        laudantium provident.</p>
+
+    <!-- <div *ngFor="let item of clicksarray">
+        <p [ngStyle]="{backgroundColor:getcolor(item)}" [ngClass]="{whiteColor:item>4}"> Total {{item}} clicks on the button...</p>
+    </div> -->
+    <div *ngFor="let item of clicksarray;let i = index">
+        <p [ngStyle]="{backgroundColor:i>3?'red':''}" 
+            [ngClass]="{whiteColor:item>4}"> 
+            Total {{item}} clicks on the button...
+        </p>
+    </div>
+
+
+</div>
+<hr>

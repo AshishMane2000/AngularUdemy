@@ -23,16 +23,16 @@
   <br />
 
   <button
-    class="btn btn-danger"
+    [ngClass]="{'btn btn-danger':flag,'btn btn-success':!flag}"
     [disabled]="flag"
     [style.color]="color"
     (click)="changeColor()"
   >
     click me
   </button>
-  <p>color is :{{ color }}</p>
+  <p [ngStyle]="{backgroundColor:color}">color is :{{ color }}</p>
   <p *ngIf="flag; else anothercode">company is : {{ company }}</p>
-  <ng-template #anothercode>
+  <ng-template #anothercode  >
     this code is executed when if condition fails
   </ng-template>
 </div>

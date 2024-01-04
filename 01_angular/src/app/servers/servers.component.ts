@@ -12,8 +12,9 @@ name="ashish";
 company="Accenture"
 constructor(  ){
   setTimeout(() => {
-    this.flag=false;
-    this.color="green"
+    Math.random()>0.5?this.flag=true:this.flag=false;
+     this.color="green"
+    //  this.flag=false
   }, 2000);
 }
 changeColor(){

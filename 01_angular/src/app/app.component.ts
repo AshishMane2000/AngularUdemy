@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '01_angular';
   namex='ashishss';
+   arr=[1,2,4,5,6,7];
 }
