@@ -7,7 +7,7 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent {
 Recipes:Recipe[]=[
-  new Recipe("a",'b','c'),
-  new Recipe("a",'b','c')
+  new Recipe("a",'bb','https://img.freepik.com/free-photo/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese_90220-1063.jpg?size=338&ext=jpg&ga=GA1.1.1412446893.1704931200&semt=sph'),
+  new Recipe("a",'b','https://img.freepik.com/free-photo/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese_90220-1063.jpg?size=338&ext=jpg&ga=GA1.1.1412446893.1704931200&semt=sph')
 ]
 }
