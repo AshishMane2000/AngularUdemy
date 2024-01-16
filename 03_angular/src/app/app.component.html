@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <p style="color:blue">Add new Server or Blueprint</p>
+    <div class="col-xs-12">
+      <label for="servername">ServerName</label>
+      <input type="text" id="servername" class="form-control">
+
+      <label for="ServerDescription">ServerDescription</label>
+      <input type="text" id="ServerDescription" class="form-control">
+
+      <button class="btn btn-primary" (click)="addserver()" >Add Server</button>
+      <button class="btn btn-primary" (click)="addblueprint()">Add Blueprint</button>
+  
+    </div>
+  
+   </div>
+   <hr>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-default" *ngFor="let elem of servers">
+      <div class="panel-heading">{{elem.ServerName}}</div>
+      <div class="panel-body">
+       </div>
+    </div>
+  </div>
+</div>
+</div>
