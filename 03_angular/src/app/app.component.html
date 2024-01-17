@@ -3,12 +3,12 @@
     <p style="color:blue">Add new Server or Blueprint</p>
     <div class="col-xs-12">
       <label for="servername">ServerName</label>
-      <input type="text" id="servername" class="form-control">
+      <input type="text" id="servername" class="form-control" [(ngModel)]="name">
 
       <label for="ServerDescription">ServerDescription</label>
-      <input type="text" id="ServerDescription" class="form-control">
+      <input type="text" id="ServerDescription" class="form-control" style="margin-bottom: 8px;" [(ngModel)]="description">
 
-      <button class="btn btn-primary" (click)="addserver()" >Add Server</button>
+      <button class="btn btn-primary" style="margin-right:2px" (click)="addserver()" >Add Server</button><span>  </span>
       <button class="btn btn-primary" (click)="addblueprint()">Add Blueprint</button>
   
     </div>
@@ -18,8 +18,10 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="panel panel-default" *ngFor="let elem of servers">
-      <div class="panel-heading">{{elem.ServerName}}</div>
-      <div class="panel-body">
+      <div class="panel-heading">{{elem.servername}}  </div>
+      <div class="panel-body" *ngIf="elem.type=='server'" [ngStyle]="{'color':'red'}" > <strong> {{elem.serverdescription}} </strong>  
+       </div>
+      <div class="panel-body" *ngIf="elem.type=='blueprint'" [ngStyle]="{'color':'blue'}">  <em>{{elem.serverdescription}}  </em> 
        </div>
     </div>
   </div>

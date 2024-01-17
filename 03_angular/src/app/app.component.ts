@@ -7,16 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '03_angular';
+  name:string="The name is John Doe";
+  description:string="Class is a user defined datatype which binds data member ,member function  into a single unit";
 
    servers: object[] = [
      ]
 
   addserver() {
-    this.servers.push(new Object({"servername": "s", "serverdescription": "this is server  " ,type:"server" }))
-    console.log(this.servers);
-    
+     this.servers.push(new Object({"servername": this.name, "serverdescription": this. description ,type:"server" }))
+     console.log(this.servers)
+     
   }
   addblueprint() {
-    this.servers.push(new Object({"servername": "b", "serverdescription": "this is blueprint  " ,type:"blueprint" }))
+    this.servers.push(new Object({"servername": this. name, "serverdescription": this. description,type:"blueprint" }))
   }
 }

@@ -1,0 +1,13 @@
+<div class="container">
+ <app-cockpit (serverCreated)=onServerAdded($event) ></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+    <app-server-element *ngFor="let elem of serverElements"
+    [element]="elem">
+    <!-- the line above is binding the value for the class field named 'element' of the serverelementcomponent/ -->
+    
+    </app-server-element>
+    </div>
+  </div>
+</div>
