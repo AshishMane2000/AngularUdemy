@@ -1,13 +1,18 @@
 <div class="container">
- <app-cockpit (serverCreated)=onServerAdded($event) ></app-cockpit>
+  <app-cockpit (serverCreated)="onServerAdded($event)" (bpcreated)="onBlueprintAdded($event)"></app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
-    <app-server-element *ngFor="let elem of serverElements"
-    [element]="elem">
-    <!-- the line above is binding the value for the class field named 'element' of the serverelementcomponent/ -->
-    
-    </app-server-element>
+      <app-server-element *ngFor="let elem of serverElements" [element]="elem">
+        <!-- the line above is binding the value for the class field named 'element' of the serverelementcomponent/ -->
+
+        <p>
+          <strong *ngIf="elem.type === 'server'" style="color: red">{{ elem.content }}</strong>
+          <em *ngIf="elem.type === 'blueprint'">{{ elem.content }}</em>
+        </p>
+
+
+      </app-server-element>
     </div>
   </div>
 </div>

@@ -2,9 +2,12 @@
 class="panel panel-default">
  <div class="panel-heading">{{ element.name }}</div>
 <div class="panel-body">
-  <p>
-    <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
-    <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-  </p>
+  <!-- <p>
+     <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+    <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em> 
+     this  content we can use in or pass from parent compoennt using ng-content 
+   </p> -->
+  <ng-content></ng-content>
+
 </div>
 </div>
