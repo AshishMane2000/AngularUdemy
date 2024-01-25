@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, SimpleChanges, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +12,15 @@ export class AppComponent {
   onServerAdded(serverData: { 'serverName': string, 'serverContent': string }) {
     //this parameter should match the defination of emmiter in cockpit component
      this.serverElements.push({ type: "server", name: serverData.serverName, content: serverData.serverContent })
-  }
+
+   }
 
   onBlueprintAdded(serverData: { 'serverName': string, 'serverContent': string }) {
     this.serverElements.push({ type: "blueprint", name: serverData.serverName, content: serverData.serverContent })
   }
-  ngOnChanges() {
+  ngOnChanges(changes:SimpleChanges) {
     console.log(" ngOnChanges ...")
+    console.log(changes)
   }
   ngOnInit() {
     console.log(" ngOnInit  ...")
